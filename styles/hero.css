@@ -1,4 +1,5 @@
 section.hero {
+  /* dica para responsivo: utilizar flex: column-reverse para inverter a ordem dos elementos */
   max-width: 80rem;
   width: 100%;
   padding: 2.5rem 2rem;
