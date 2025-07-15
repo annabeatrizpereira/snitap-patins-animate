@@ -5,7 +5,7 @@ footer {
   margin-inline: auto;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
 
   & .logo {
@@ -27,7 +27,9 @@ footer {
 
   & nav {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-block: 3rem;
 
     & a {
       width: fit-content;
@@ -64,7 +66,6 @@ footer {
       height: 2.5rem;
       display: flex;
       align-items: center;
-      justify-content: center;
 
       border-radius: 5rem;
 
@@ -78,7 +79,7 @@ footer {
         width: 1.5rem;
         height: auto;
       }
-      
+
       &::before {
         content: "";
         width: inherit;
@@ -89,10 +90,34 @@ footer {
 
         position: absolute;
         top: 0;
-        left: 0;
+        left: -.5rem;
         z-index: -1;
 
         scale: 0;
+      }
+    }
+  }
+}
+
+@media (width >= 920px) {
+  footer {
+    align-items: center;
+    flex-direction: row;
+
+    & nav {
+      flex-direction: row;
+      gap: 2rem;
+      margin-block: 0;
+    }
+
+    & .social-links {
+      & a {
+        justify-content: center;
+      
+        &::before{
+
+        left: 0;
+        }
       }
     }
   }
